@@ -1,0 +1,68 @@
+{
+    "nav":[
+        {
+            "name":"The Conference",
+            "link":"index.html"
+        },
+        {
+            "name":"Speakers JS/JSON",
+            "link":"jsspeakers.html"
+        },
+        {
+            "name":"Speakers PHP/MySQL",
+            "link":"#"
+        },
+        {
+            "name":"Schedule",
+            "link":"#"
+        },
+        {
+            "name":"Sign Up",
+            "link":"#"
+        }
+    ],
+    "speakers":[
+        {
+            "name":"Mae Jemison",
+            "title":"Doctor, Astronaut, Scientist",
+            "desc":"Mae C. Jemison is a leader in deep space exploration and is the current principal of the 100 Year Starship &mdash; a project with the goal of sending future astronauts out of the Solar System within 100 years. Jemison aims to increase public interest in future deep space exploration projects.<br><br>Jemison is also the first African-American female astronaut. In 1992, she flew into space aboard the Endeavour, becoming the first African-American woman in space.",
+            "img":"images/mae-jemison.jpg"
+        },
+        {
+            "name":"Elon Musk",
+            "title":"Entrepreneur, Investor, Engineer",
+            "desc":"South African entrepreneur Elon Musk is known for founding Tesla Motors and SpaceX, which launched a landmark commercial spacecraft in 2012. CEO of SpaceX which is the only privately owned space exploration organization and is rapidly growing.",
+            "img":"images/elon-musk.jpg"
+        },
+        {
+            "name":"Scott Kelly",
+            "title":"Engineer, Astronaut, United States Navy Captain",
+            "desc":"A veteran of four space flights, Kelly commanded the International Space Station (ISS) on three expeditions and was a member of the yearlong mission to the ISS. In October 2015, he set the record for the total accumulated number of days spent in space, the single longest space mission by an American astronaut.",
+            "img":"images/scott-kelly.jpg"
+        },
+        {
+            "name":"Sunita Williams",
+            "title":"Astronaut, United States Navy Captain",
+            "desc":"She formerly held the records for total spacewalks by a woman (seven) and most spacewalk time for a woman (50 hours, 40 minutes). Williams was assigned to the International Space Station as a member of Expedition 14 and Expedition 15. In 2012, she served as a flight engineer on Expedition 32 and then commander of Expedition 33.<br><br>She is currently an active selectee for commercial flights to be deployed.",
+            "img":"images/sunita-williams.jpg"
+        },
+        {
+            "name":"Yi Soyeon",
+            "title":" Astronaut, Biotechnologist",
+            "desc":"Yi Soyeon is the first Korean to fly to space. She spent nine days carrying out experiments and medical tests on the International Space Station in 2008.",
+            "img":"images/yi-soyeon.jpg"
+        },
+        {
+            "name":"Gennady Padalka",
+            "title":"Russian Air Force Officer, RKA Cosmonaut",
+            "desc":"Padalka has spent 879 days in space, more than any other person in the world. He worked on both Mir and the International Space Station.<br><br>Padalka is a recipient of the Hero Star of the Russian Federation and the title of Russian Federation Test-Cosmonaut. He is a prize winner of the Russian Federation Government in the field of science and technology.",
+            "img":"images/gennady-padalka.jpg"
+        },
+        {
+            "name":"Neil Degrasse Tyson",
+            "title":"Astrophysicist, Author, Science Communicator",
+            "desc":"One of America's best-known scientists, astrophysicist Neil deGrasse Tyson has spent much of his career sharing his knowledge with others. He has a great talent for presenting complex concepts in a clear and accessible manner. Although he is a cosmologist and astrophysicist, but he is incredibly popular among space enthusiasts which also gives him an equivalent edge. Some would say, he's the successor or Carl Sagan.",
+            "img":"images/neil-degrasse.jpg"
+        }
+    ]
+}
