@@ -1,0 +1,150 @@
+
+.content-body {
+    margin-top: 80px;
+    /* padding: 0 80px; */
+    height: 100vh;
+    z-index: 0;
+}
+
+.splash {
+
+}
+
+.splash .txt {
+    width: 100%;
+    margin-top: 16%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-family: "Ailerons", sans-serif;
+}
+
+.splash .about-pointer {
+    width: 100%;
+    margin-top: 35%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: "Ailerons", sans-serif;
+}
+
+.about-pointer .container {
+    text-align: center;
+}
+
+.splash .img {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.splash .img img {
+    width: 100%;
+}
+
+.top-line, .bottom-line {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.splash .txt .top-line h1 {
+    color: white;
+    font-size: 60px;
+}
+
+.splash .txt .top-line span {
+    color: #E84A43;
+}
+
+.bottom-line .line {
+    height: 2px;
+    width: 80px;
+    background-color: #E84A43;
+    margin-top: 26px;
+}
+
+.bottom-line h2 {
+    margin: 12px 0 0 20px;
+    color: #fff;
+}
+
+.bottom-line span {
+    color: #E84A43;
+}
+
+.bottom-line .space {
+    width: 130px;
+}
+
+.bottom-line img {
+    height: 60px;
+}
+
+.about {
+    height: 100vh;
+}
+
+.about-pointer .container a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.about-pointer .container i {
+    font-size: 20px;
+}
+
+.speaker-container {
+    padding: 20px;
+}
+
+.speaker {
+    height: 300px;
+    width: 800px;
+    padding: 20px;
+    display: flex;
+}
+
+.speaker-left {
+    height: 100%;
+    width: 40%;
+}
+
+.speaker-left .img-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.speaker-left .img-container img {
+    height: 100%;
+}
+
+.speaker-right {
+    height: 100%;
+    width: 60%;
+}
+
+.speaker-right .speaker-desc h1 {
+    font-size: 32px;
+    font-family: "Times New Roman", serif;
+    margin-bottom: -4px;
+}
+
+.speaker-right .speaker-desc h2 {
+    font-size: 20px;
+    color: #73839C;
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: lighter;
+}
+
+.speaker-right .speaker-desc p {
+    font-size: 16px;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+
+
+
