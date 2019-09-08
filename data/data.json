@@ -10,15 +10,15 @@
         },
         {
             "name":"Speakers PHP/MySQL",
-            "link":"#"
+            "link":"speakersphp.php"
         },
         {
             "name":"Schedule",
-            "link":"#"
+            "link":"schedule.html"
         },
         {
             "name":"RSVP",
-            "link":"#"
+            "link":"rsvp.html"
         }
     ],
     "speakers":[

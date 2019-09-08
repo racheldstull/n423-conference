@@ -1,9 +1,9 @@
 <?php
 
     $dbhost = 'localhost';
-    $dbuser = 'phpuser'; //cas username
-    $dbpwd = 'phpuser'; //cas username
-    $dbname = 'n423'; //cas username_db
+    $dbuser = 'rdstull'; //cas username
+    $dbpwd = 'rdstull'; //cas username
+    $dbname = 'rdstull_db'; //cas username_db
 
     $link = mysqli_connect($dbhost, $dbuser, $dbpwd, $dbname);
 
