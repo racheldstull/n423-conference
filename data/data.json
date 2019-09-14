@@ -1,8 +1,12 @@
 {
     "nav":[
         {
-            "name":"The Conference",
+            "name":"Home",
             "link":"index.html"
+        },
+        {
+            "name":"The Conference",
+            "link":"index.html#about-section"
         },
         {
             "name":"Speakers JS/JSON",

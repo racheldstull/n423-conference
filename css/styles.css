@@ -10,6 +10,11 @@ body, html {
 h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 16px; }
 
+@font-face {
+  font-family: 'Ailerons';
+  src: url("ailerons.eot");
+  src: url("ailerons.woff") format("woff"), url("ailerons.ttf") format("truetype"); }
+
 nav {
   height: 80px;
   width: 100vw;
@@ -84,6 +89,9 @@ nav {
   /* padding: 0 80px; */
   height: 100vh;
   z-index: 0; }
+  .content-body h1 {
+    color: white;
+    font-size: 30px; }
 
 .splash .txt {
   width: 100%;
@@ -156,59 +164,62 @@ nav {
 .about {
   height: 100vh; }
 
-.speaker-container {
-  padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: black; }
-  .speaker-container .speaker {
-    height: 300px;
-    width: 80%;
+.speaker-content {
+  padding-top: 30px;
+  background-color: #000; }
+  .speaker-content h1 {
+    color: white;
+    text-align: center;
+    padding-bottom: 30px; }
+  .speaker-content .speaker-container, .speaker-content .speaker-php {
     padding: 20px;
-    margin-bottom: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    color: white; }
-    .speaker-container .speaker .speaker-left {
-      height: 100%;
-      width: 30%; }
-      .speaker-container .speaker .speaker-left .img-container {
-        width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: black; }
+    .speaker-content .speaker-container .speaker, .speaker-content .speaker-php .speaker {
+      height: 300px;
+      width: 80%;
+      padding: 20px;
+      margin-bottom: 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      color: white; }
+      .speaker-content .speaker-container .speaker .speaker-left, .speaker-content .speaker-php .speaker .speaker-left {
         height: 100%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center; }
-        .speaker-container .speaker .speaker-left .img-container img {
-          height: 100%; }
-    .speaker-container .speaker .speaker-right {
-      height: 100%;
-      width: 70%; }
-      .speaker-container .speaker .speaker-right .speaker-desc h1 {
-        font-size: 32px;
-        font-family: "Times New Roman", serif;
-        margin-bottom: -4px; }
-      .speaker-container .speaker .speaker-right .speaker-desc h2 {
-        font-size: 20px;
-        color: #73839C;
-        font-family: "Trebuchet MS", sans-serif;
-        font-weight: lighter; }
-      .speaker-container .speaker .speaker-right .speaker-desc p {
-        font-size: 16px;
-        font-family: "Trebuchet MS", sans-serif;
-        font-weight: lighter; }
-
-.speaker-content {
-  background-color: black;
-  height: 100%; }
+        width: 30%; }
+        .speaker-content .speaker-container .speaker .speaker-left .img-container, .speaker-content .speaker-php .speaker .speaker-left .img-container {
+          width: 100%;
+          height: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center; }
+          .speaker-content .speaker-container .speaker .speaker-left .img-container img, .speaker-content .speaker-php .speaker .speaker-left .img-container img {
+            height: 100%; }
+      .speaker-content .speaker-container .speaker .speaker-right, .speaker-content .speaker-php .speaker .speaker-right {
+        height: 100%;
+        width: 70%; }
+        .speaker-content .speaker-container .speaker .speaker-right .speaker-desc h1, .speaker-content .speaker-php .speaker .speaker-right .speaker-desc h1 {
+          font-size: 32px;
+          font-family: "Times New Roman", serif;
+          margin-bottom: -4px; }
+        .speaker-content .speaker-container .speaker .speaker-right .speaker-desc h2, .speaker-content .speaker-php .speaker .speaker-right .speaker-desc h2 {
+          font-size: 20px;
+          color: #73839C;
+          font-family: "Trebuchet MS", sans-serif;
+          font-weight: lighter; }
+        .speaker-content .speaker-container .speaker .speaker-right .speaker-desc p, .speaker-content .speaker-php .speaker .speaker-right .speaker-desc p {
+          font-size: 16px;
+          font-family: "Trebuchet MS", sans-serif;
+          font-weight: lighter; }

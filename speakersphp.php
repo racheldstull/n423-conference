@@ -41,14 +41,14 @@ while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
 
 <div class="content-body speaker-content">
     <h1>Speakers</h1>
-    <div class="speaker-container">
+    <div class="speaker-php">
         <?php
         foreach ($speakers as $speaker){
             echo '
                  <div class="speaker">
                     <div class="speaker-left">
                         <div class="img-container">
-                            <img src="images/'.$speaker["img"].'" alt="'.$speaker["img"].'>
+                            <img src="images/'.$speaker["img"].'" alt="'.$speaker["img"].'">
                         </div>
                      </div>
                      <div class="speaker-right">

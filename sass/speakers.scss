@@ -1,59 +1,70 @@
-.speaker-container {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: black;
+.speaker-content {
+    padding-top: 30px;
+    background-color: #000;
 
-    .speaker {
-        height: 300px;
-        width: 80%;
-        padding: 20px;
-        margin-bottom: 40px;
-        display: flex;
+    h1 {
         color: white;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .speaker-container, .speaker-php {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
     
-        .speaker-left {
-            height: 100%;
-            width: 30%;
-
-            .img-container {
-                width: 100%;
+        .speaker {
+            height: 300px;
+            width: 80%;
+            padding: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            color: white;
+        
+            .speaker-left {
                 height: 100%;
-                display: flex;
-                align-items: center;
-
-                img {
+                width: 30%;
+    
+                .img-container {
+                    width: 100%;
                     height: 100%;
+                    display: flex;
+                    align-items: center;
+    
+                    img {
+                        height: 100%;
+                    }
                 }
             }
+    
+            .speaker-right {
+                height: 100%;
+                width: 70%;
+    
+                .speaker-desc {
+    
+                    h1 {
+                        font-size: 32px;
+                        font-family: "Times New Roman", serif;
+                        margin-bottom: -4px;
+                    }
+    
+                    h2 {
+                        font-size: 20px;
+                        color: #73839C;
+                        font-family: "Trebuchet MS", sans-serif;
+                        font-weight: lighter;
+                    }
+    
+                    p {
+                        font-size: 16px;
+                        font-family: "Trebuchet MS", sans-serif;
+                        font-weight: lighter;
+                    }
+                }
+            }        
         }
-
-        .speaker-right {
-            height: 100%;
-            width: 70%;
-
-            .speaker-desc {
-
-                h1 {
-                    font-size: 32px;
-                    font-family: "Times New Roman", serif;
-                    margin-bottom: -4px;
-                }
-
-                h2 {
-                    font-size: 20px;
-                    color: #73839C;
-                    font-family: "Trebuchet MS", sans-serif;
-                    font-weight: lighter;
-                }
-
-                p {
-                    font-size: 16px;
-                    font-family: "Trebuchet MS", sans-serif;
-                    font-weight: lighter;
-                }
-            }
-        }        
     }
 }
