@@ -1,0 +1,85 @@
+.contact-content {
+  background-image: url("../images/bg-contact.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+
+  .form-container {
+    height: 440px;
+    width: 460px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 180px;
+    overflow: hidden;
+    border-radius: 6px;
+
+    h1 {
+      color: $bg;
+      text-align: center;
+      font-family: "Aileronsregular", sans-serif;
+      padding-top: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+
+      input[type=text], textarea {
+        border: none;
+        padding: 5px;
+        border-bottom: 1.5px solid #666666;
+        font-family: "Trebuchet MS", sans-serif;
+        transition: all .2s ease-in-out;
+
+        &:focus {
+          outline: none;
+          border-bottom: 1.5px solid $red;
+        }
+      }
+
+      .top-formsec {
+        display: flex;
+        flex-direction: row;
+
+        input[type=text] {
+          width: 48%;
+          margin-bottom: 30px;
+
+          &:nth-child(1){
+            margin-right: 4%;
+          }
+        }
+      }
+
+      .middle-formsec {
+        display: flex;
+        flex-direction: column;
+
+        input[type=text], textarea {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+
+      .bottom-formsec {
+        text-align: right;
+
+        button {
+          background-color: $red;
+          border: none;
+          color: $white;
+          font-family: "Trebuchet MS", sans-serif;
+          padding: 10px 10px 100% 10px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,16 +1,15 @@
 .content-body {
-    margin-top: 80px;
-    /* padding: 0 80px; */
     height: 100vh;
     z-index: 0;
 
     h1 {
-        color: white;
+        color: $white;
         font-size: 30px;
     }
 }
 
 .splash {
+    padding-top: 80px;
 
     .txt {
         width: 100%;
@@ -18,7 +17,7 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        font-family: "Ailerons", sans-serif;
+        font-family: "Aileronsregular", sans-serif;
 
         .top-line, .bottom-line {
             width: 100%;
@@ -29,12 +28,12 @@
         .top-line {
 
             h1 {
-                color: white;
+                color: $white;
                 font-size: 60px;
             }
 
             span {
-                color: #E84A43;
+                color: $red;
             }
         }
 
@@ -43,17 +42,17 @@
             .line {
                 height: 2px;
                 width: 80px;
-                background-color: #E84A43;
+                background-color: $red;
                 margin-top: 26px;
             }
 
             h2 {
                 margin: 12px 0 0 20px;
-                color: #fff;
+                color: $white;
             }
 
             span {
-                color: #E84A43;
+                color: $red;
             }
 
             .space {
@@ -72,14 +71,14 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        color: white;
-        font-family: "Ailerons", sans-serif;
+        color: $white;
+        font-family: "Aileronsregular", sans-serif;
 
         .container {
             text-align: center;
 
             a {
-                color: #fff;
+                color: $white;
                 text-decoration: none;
 
                 div {

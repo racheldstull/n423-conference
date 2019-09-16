@@ -10,10 +10,39 @@ body, html {
 h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 16px; }
 
-@font-face {
-  font-family: 'Ailerons';
-  src: url("ailerons.eot");
-  src: url("ailerons.woff") format("woff"), url("ailerons.ttf") format("truetype"); }
+#popup {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 300px;
+  width: 600px;
+  pointer-events: initial;
+  cursor: auto;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 8px 3px rgba(33, 31, 36, 0.44);
+  box-shadow: 0 0 8px 3px rgba(33, 31, 36, 0.44);
+  border-bottom: 6px solid #E84A43; }
+  #popup .text {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 20px; }
 
 nav {
   height: 80px;
@@ -25,152 +54,193 @@ nav {
   position: fixed;
   top: 0;
   z-index: 999; }
-
-.nav-left {
-  width: 30%;
-  height: 80px; }
-
-.nav-right {
-  width: 70%;
-  height: 80px; }
-
-.logo-container {
-  height: 100%;
-  width: 100%;
-  padding-left: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.logo-container img {
-  height: 90%; }
-
-.links-container {
-  text-align: right;
-  padding-right: 100px; }
-
-.links-container a {
-  color: #fff;
-  padding: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-family: "Trebuchet MS", sans-serif;
-  margin-left: 6px;
-  line-height: 80px;
-  -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  border-bottom: 1px solid #211F24; }
-
-.links-container a:hover {
-  color: #E84A43;
-  border-bottom: 2px solid #E84A43; }
-
-.links-container a:last-child {
-  background-color: #E84A43;
-  margin-left: 10px; }
-
-.links-container a:hover:last-child {
-  color: #fff;
-  background-color: #bd3d37;
-  border-bottom: 1px solid #211F24; }
-
-.btn-signup {
-  padding: 20px;
-  color: #211F24;
-  background-color: #f4bc54; }
+  nav .nav-left {
+    width: 30%;
+    height: 80px; }
+    nav .nav-left .logo-container {
+      height: 100%;
+      width: 100%;
+      padding-left: 100px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      nav .nav-left .logo-container a {
+        height: 100%; }
+        nav .nav-left .logo-container a img {
+          height: 90%; }
+  nav .nav-right {
+    width: 70%;
+    height: 80px; }
+    nav .nav-right .links-container {
+      text-align: right;
+      padding-right: 100px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      position: absolute;
+      right: 0;
+      height: 80px;
+      top: -15px; }
+      nav .nav-right .links-container .aNorm {
+        color: #fff;
+        padding: 15px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: "Trebuchet MS", sans-serif;
+        margin-left: 6px;
+        line-height: 80px;
+        -webkit-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        border-bottom: 1px solid #211F24; }
+        nav .nav-right .links-container .aNorm:hover {
+          color: #E84A43;
+          border-bottom: 2px solid #E84A43; }
+        nav .nav-right .links-container .aNorm:last-child {
+          background-color: #E84A43;
+          margin-left: 10px; }
+        nav .nav-right .links-container .aNorm:hover:last-child {
+          color: #fff;
+          background-color: #E84A43;
+          border-bottom: 1px solid #211F24; }
+        nav .nav-right .links-container .aNorm .btn-signup {
+          padding: 20px;
+          color: #211F24;
+          background-color: #f4bc54; }
+      nav .nav-right .links-container .dropdown {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        nav .nav-right .links-container .dropdown a {
+          color: #fff;
+          padding: 15px;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 14px;
+          font-family: "Trebuchet MS", sans-serif;
+          margin-left: 6px;
+          line-height: 80px;
+          -webkit-transition: all .2s ease-in-out;
+          -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out; }
+          nav .nav-right .links-container .dropdown a:hover {
+            cursor: pointer; }
+        nav .nav-right .links-container .dropdown .dropdown-content {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          position: absolute;
+          margin-top: 80px;
+          min-width: 130px;
+          background-color: #211F24; }
+          nav .nav-right .links-container .dropdown .dropdown-content a {
+            padding: 2px 2px 2px 12px;
+            line-height: 30px;
+            text-align: left;
+            border-left: 1px solid #211F24; }
+            nav .nav-right .links-container .dropdown .dropdown-content a:hover {
+              color: #E84A43;
+              border-left: 2px solid #E84A43; }
 
 .content-body {
-  margin-top: 80px;
-  /* padding: 0 80px; */
   height: 100vh;
   z-index: 0; }
   .content-body h1 {
-    color: white;
+    color: #fff;
     font-size: 30px; }
 
-.splash .txt {
-  width: 100%;
-  margin-top: 16%;
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  font-family: "Ailerons", sans-serif; }
-  .splash .txt .top-line, .splash .txt .bottom-line {
+.splash {
+  padding-top: 80px; }
+  .splash .txt {
     width: 100%;
+    margin-top: 16%;
+    position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-  .splash .txt .top-line h1 {
-    color: white;
-    font-size: 60px; }
-  .splash .txt .top-line span {
-    color: #E84A43; }
-  .splash .txt .bottom-line .line {
-    height: 2px;
-    width: 80px;
-    background-color: #E84A43;
-    margin-top: 26px; }
-  .splash .txt .bottom-line h2 {
-    margin: 12px 0 0 20px;
-    color: #fff; }
-  .splash .txt .bottom-line span {
-    color: #E84A43; }
-  .splash .txt .bottom-line .space {
-    width: 130px; }
-  .splash .txt .bottom-line img {
-    height: 60px; }
-
-.splash .about-pointer {
-  width: 100%;
-  margin-top: 35%;
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  color: white;
-  font-family: "Ailerons", sans-serif; }
-  .splash .about-pointer .container {
-    text-align: center; }
-    .splash .about-pointer .container a {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-family: "Aileronsregular", sans-serif; }
+    .splash .txt .top-line, .splash .txt .bottom-line {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+    .splash .txt .top-line h1 {
       color: #fff;
-      text-decoration: none; }
-      .splash .about-pointer .container a div i {
-        font-size: 20px; }
-
-.splash .img {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden; }
-  .splash .img img {
-    width: 100%; }
+      font-size: 60px; }
+    .splash .txt .top-line span {
+      color: #E84A43; }
+    .splash .txt .bottom-line .line {
+      height: 2px;
+      width: 80px;
+      background-color: #E84A43;
+      margin-top: 26px; }
+    .splash .txt .bottom-line h2 {
+      margin: 12px 0 0 20px;
+      color: #fff; }
+    .splash .txt .bottom-line span {
+      color: #E84A43; }
+    .splash .txt .bottom-line .space {
+      width: 130px; }
+    .splash .txt .bottom-line img {
+      height: 60px; }
+  .splash .about-pointer {
+    width: 100%;
+    margin-top: 35%;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: #fff;
+    font-family: "Aileronsregular", sans-serif; }
+    .splash .about-pointer .container {
+      text-align: center; }
+      .splash .about-pointer .container a {
+        color: #fff;
+        text-decoration: none; }
+        .splash .about-pointer .container a div i {
+          font-size: 20px; }
+  .splash .img {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; }
+    .splash .img img {
+      width: 100%; }
 
 .about {
   height: 100vh; }
 
 .speaker-content {
-  padding-top: 30px;
+  padding-top: 110px;
   background-color: #000; }
   .speaker-content h1 {
-    color: white;
+    color: #fff;
     text-align: center;
-    padding-bottom: 30px; }
+    padding: 30px 0 30px 0;
+    font-family: "Aileronsregular", sans-serif;
+    font-size: 50px; }
   .speaker-content .speaker-container, .speaker-content .speaker-php {
     padding: 20px;
     display: -webkit-box;
@@ -183,7 +253,7 @@ nav {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: black; }
+    background-color: #000; }
     .speaker-content .speaker-container .speaker, .speaker-content .speaker-php .speaker {
       height: 300px;
       width: 80%;
@@ -192,7 +262,7 @@ nav {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      color: white; }
+      color: #fff; }
       .speaker-content .speaker-container .speaker .speaker-left, .speaker-content .speaker-php .speaker .speaker-left {
         height: 100%;
         width: 30%; }
@@ -213,7 +283,8 @@ nav {
         .speaker-content .speaker-container .speaker .speaker-right .speaker-desc h1, .speaker-content .speaker-php .speaker .speaker-right .speaker-desc h1 {
           font-size: 32px;
           font-family: "Times New Roman", serif;
-          margin-bottom: -4px; }
+          margin-bottom: -30px;
+          text-align: left; }
         .speaker-content .speaker-container .speaker .speaker-right .speaker-desc h2, .speaker-content .speaker-php .speaker .speaker-right .speaker-desc h2 {
           font-size: 20px;
           color: #73839C;
@@ -223,3 +294,86 @@ nav {
           font-size: 16px;
           font-family: "Trebuchet MS", sans-serif;
           font-weight: lighter; }
+
+.contact-content {
+  background-image: url("../images/bg-contact.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .contact-content .form-container {
+    height: 440px;
+    width: 460px;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 180px;
+    overflow: hidden;
+    border-radius: 6px; }
+    .contact-content .form-container h1 {
+      color: #211F24;
+      text-align: center;
+      font-family: "Aileronsregular", sans-serif;
+      padding-top: 30px; }
+    .contact-content .form-container form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 40px; }
+      .contact-content .form-container form input[type=text], .contact-content .form-container form textarea {
+        border: none;
+        padding: 5px;
+        border-bottom: 1.5px solid #666666;
+        font-family: "Trebuchet MS", sans-serif;
+        -webkit-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out; }
+        .contact-content .form-container form input[type=text]:focus, .contact-content .form-container form textarea:focus {
+          outline: none;
+          border-bottom: 1.5px solid #E84A43; }
+      .contact-content .form-container form .top-formsec {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row; }
+        .contact-content .form-container form .top-formsec input[type=text] {
+          width: 48%;
+          margin-bottom: 30px; }
+          .contact-content .form-container form .top-formsec input[type=text]:nth-child(1) {
+            margin-right: 4%; }
+      .contact-content .form-container form .middle-formsec {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        .contact-content .form-container form .middle-formsec input[type=text], .contact-content .form-container form .middle-formsec textarea {
+          width: 100%;
+          margin-bottom: 30px; }
+      .contact-content .form-container form .bottom-formsec {
+        text-align: right; }
+        .contact-content .form-container form .bottom-formsec button {
+          background-color: #E84A43;
+          border: none;
+          color: #fff;
+          font-family: "Trebuchet MS", sans-serif;
+          padding: 10px 10px 100% 10px; }
+          .contact-content .form-container form .bottom-formsec button:hover {
+            cursor: pointer; }

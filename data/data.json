@@ -5,16 +5,20 @@
             "link":"index.html"
         },
         {
-            "name":"The Conference",
+            "name":"About",
             "link":"index.html#about-section"
         },
         {
-            "name":"Speakers JS/JSON",
+            "name":"Speakers",
             "link":"jsspeakers.html"
         },
         {
-            "name":"Speakers PHP/MySQL",
-            "link":"speakersphp.php"
+            "name":"Contact",
+            "link":"contact.html"
+        },
+        {
+          "name":"Message Center",
+          "link":"messages.html"
         },
         {
             "name":"Schedule",
@@ -49,12 +53,6 @@
             "title":"Astronaut, United States Navy Captain",
             "desc":"She formerly held the records for total spacewalks by a woman (seven) and most spacewalk time for a woman (50 hours, 40 minutes). Williams was assigned to the International Space Station as a member of Expedition 14 and Expedition 15. In 2012, she served as a flight engineer on Expedition 32 and then commander of Expedition 33.<br><br>She is currently an active selectee for commercial flights to be deployed.",
             "img":"images/sunita-williams.jpg"
-        },
-        {
-            "name":"Yi Soyeon",
-            "title":" Astronaut, Biotechnologist",
-            "desc":"Yi Soyeon is the first Korean to fly to space. She spent nine days carrying out experiments and medical tests on the International Space Station in 2008.",
-            "img":"images/yi-soyeon.jpg"
         },
         {
             "name":"Gennady Padalka",

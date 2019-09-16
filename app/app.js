@@ -4,7 +4,8 @@ function initApp(){
         console.log(result.speakers);
         let speakersArray = result.speakers;
         let navArray = result.nav;
-        
+
+        // LOAD SPEAKERS TO SPEAKER PAGE
         $.each(speakersArray, function(idx, speakers){
             $(".speaker-container").append(
                 `<div class="speaker">
@@ -22,18 +23,94 @@ function initApp(){
                      </div>
                  </div>`
             );
-        })
+        });
 
+        // $.each(messages, function(idx, value) {}
+
+// LOAD NAV ITEMS TO NAVBAR
         $.each(navArray, function(idx, navItems){
             $(".links-container").append(
-                `<a href="${navItems.link}">${navItems.name}</a>`
+                `<a class="aNorm" href="${navItems.link}">${navItems.name}</a>`
             );
         })
     }).fail(function(error){
         console.log(error);
-    })
+    });
+
+// ADD CONTACT INFORMATION TO DATABASE
+    $("#add").click(function (e) {
+        e.preventDefault();
+
+        let name = $("#addName").val();
+        let email = $("#addEmail").val();
+        let subject = $("#addSubject").val();
+        let message = $("#addMessage").val()
+        let time = Date($.now());
+
+        if(name == "" | email == "" | subject == "" | message == ""){
+            $("#popup").css("display", "flex");
+            $("html").css("pointer-events", "none");
+            $("html").css("cursor", "wait");
+
+            $("#popup .text").append(
+                `<p>Please complete entire form</p>`
+            );
+
+            setTimeout(function(){
+                $("#popup").css("display", "none");
+                $("html").css("pointer-events", "initial");
+                $("html").css("cursor", "auto");
+            }, 1500)
+
+        } else {
+            FIREBASE_UTILITY.writeData(name, email, subject, message, time);
+            FIREBASE_UTILITY.getAllMessages(serverCallBack);
+            success();
+        }
+    });
+}
+
+function success(){
+    $("#popup").css("display", "flex");
+    $("html").css("pointer-events", "none");
+    $("html").css("cursor", "wait");
+
+    $("#popup .text").append(
+        `<p>Query successfully submitted!</p><br>
+         <p>Reloading page...</p>`
+    );
+
+
+    setTimeout(function(){
+        location.reload();
+    }, 2000);
+}
+
+// function smoothScroll(){
+//     $("#").click(function(){
+//         $('html,body').animate({
+//             scrollTop: $("#about-section").offset().top - 10
+//         });
+//     });
+// }
+
+function initHideDropdown(){
+    $(".dropdown-content").hide();
+}
+
+function dropdown(){
+    $(".dropdown").click(function(){
+        $(".dropdown-content").toggle();
+    });
+}
+
+function serverCallBack(result){
+
 }
 
 $(document).ready(function(){
-    initApp()
+    initHideDropdown();
+    FIREBASE_UTILITY.getAllMessages(serverCallBack);
+    initApp();
+    // smoothScroll();
 });

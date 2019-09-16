@@ -23,6 +23,9 @@ while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ICDSE 2020 | Speakers</title>
+    <link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
+    <!-- font face credit https://befonts.com/ailerons-typeface.html -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>

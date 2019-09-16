@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ICDSE 2020 | Contact</title>
+    <link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
+    <!-- font face credit https://befonts.com/ailerons-typeface.html -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!-- International Conference for Deep Space Exploration -->
+
+<nav>
+    <div class="nav-left">
+        <div class="logo-container">
+            <a href="index.html"><img src="images/logo.png" alt="Logo for International Conference for Deep Space Exploration 2020"></a>
+        </div>
+    </div>
+    <div class="nav-right">
+        <div class="links-container"></div>
+    </div>
+</nav>
+
+<div id="popup">
+    <div class="text">
+    </div>
+</div>
+
+<div class="content-body contact-content">
+    <div class="form-container">
+        <h1>Contact Us</h1>
+        <form id="contactForm" method="post" action="#">
+            <div class="form-section top-formsec">
+                <input id="addName" type="text" placeholder="Full Name" required>
+                <input id="addEmail" type="text" placeholder="Email" required>
+            </div>
+            <div class="form-section middle-formsec">
+                <input id="addSubject" type="text" placeholder="Subject" required>
+                <textarea  id="addMessage" rows="6" cols="50" name="message" form="contactForm" placeholder="Enter message here..." required></textarea>
+            </div>
+            <div class="form-section bottom-formsec">
+                <button id="add">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="lib/jquery-3.4.1.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-database.js"></script>
+<script src="app/firebaseUtility.js"></script>
+<script src="app/app.js"></script>
+</body>
+</html>
