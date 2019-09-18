@@ -106,15 +106,13 @@ nav {
           border-bottom: 2px solid #E84A43; }
         nav .nav-right .links-container .aNorm:last-child {
           background-color: #E84A43;
-          margin-left: 10px; }
+          margin-left: 10px;
+          padding-right: 20px;
+          padding-left: 20px; }
         nav .nav-right .links-container .aNorm:hover:last-child {
           color: #fff;
-          background-color: #E84A43;
+          background-color: #c1403a;
           border-bottom: 1px solid #211F24; }
-        nav .nav-right .links-container .aNorm .btn-signup {
-          padding: 20px;
-          color: #211F24;
-          background-color: #f4bc54; }
       nav .nav-right .links-container .dropdown {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -229,9 +227,6 @@ nav {
     .splash .img img {
       width: 100%; }
 
-.about {
-  height: 100vh; }
-
 .speaker-content {
   padding-top: 110px;
   background-color: #000; }
@@ -322,7 +317,7 @@ nav {
       color: #211F24;
       text-align: center;
       font-family: "Aileronsregular", sans-serif;
-      padding-top: 30px; }
+      padding-top: 60px; }
     .contact-content .form-container form {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -331,11 +326,11 @@ nav {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      padding: 40px; }
+      padding: 30px 60px 60px 60px; }
       .contact-content .form-container form input[type=text], .contact-content .form-container form textarea {
         border: none;
         padding: 5px;
-        border-bottom: 1.5px solid #666666;
+        border-bottom: 1.5px solid #7B7B7B;
         font-family: "Trebuchet MS", sans-serif;
         -webkit-transition: all .2s ease-in-out;
         -o-transition: all .2s ease-in-out;
@@ -374,6 +369,10 @@ nav {
           border: none;
           color: #fff;
           font-family: "Trebuchet MS", sans-serif;
-          padding: 10px 10px 100% 10px; }
+          padding: 10px 20px 100% 20px;
+          -webkit-transition: all .2s ease-in-out;
+          -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out; }
           .contact-content .form-container form .bottom-formsec button:hover {
+            background-color: #c1403a;
             cursor: pointer; }

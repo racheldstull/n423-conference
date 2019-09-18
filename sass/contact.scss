@@ -20,18 +20,18 @@
       color: $bg;
       text-align: center;
       font-family: "Aileronsregular", sans-serif;
-      padding-top: 30px;
+      padding-top: 60px;
     }
 
     form {
       display: flex;
       flex-direction: column;
-      padding: 40px;
+      padding: 30px 60px 60px 60px;
 
       input[type=text], textarea {
         border: none;
         padding: 5px;
-        border-bottom: 1.5px solid #666666;
+        border-bottom: 1.5px solid $grey;
         font-family: "Trebuchet MS", sans-serif;
         transition: all .2s ease-in-out;
 
@@ -73,9 +73,11 @@
           border: none;
           color: $white;
           font-family: "Trebuchet MS", sans-serif;
-          padding: 10px 10px 100% 10px;
+          padding: 10px 20px 100% 20px;
+          transition: all .2s ease-in-out;
 
           &:hover {
+            background-color: $red-hover;
             cursor: pointer;
           }
         }

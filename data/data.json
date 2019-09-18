@@ -10,15 +10,45 @@
         },
         {
             "name":"Speakers",
-            "link":"jsspeakers.html"
+            "link":"jsspeakers.html",
+            "dropdown": [
+                {
+                    "name": "PHP Ver.",
+                    "link": "#"
+                },
+                {
+                    "name": "JS Ver.",
+                    "link": "#"
+                }
+            ]
         },
         {
             "name":"Contact",
-            "link":"contact.html"
+            "link":"contact.html",
+            "dropdown": [
+                {
+                    "name": "PHP Ver.",
+                    "link": "#"
+                },
+                {
+                    "name": "JS Ver.",
+                    "link": "#"
+                }
+            ]
         },
         {
           "name":"Message Center",
-          "link":"messages.html"
+          "link":"messages.html",
+            "dropdown": [
+                {
+                    "name": "PHP Ver.",
+                    "link": "#"
+                },
+                {
+                    "name": "JS Ver.",
+                    "link": "#"
+                }
+            ]
         },
         {
             "name":"Schedule",

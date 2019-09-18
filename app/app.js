@@ -1,3 +1,6 @@
+// /////////////////////////////////////// //
+// ---------------- INIT APP ---------------- //
+// ////////////////////////////////////// //
 function initApp(){
     $.getJSON("data/data.json", function(result){
         //success one
@@ -29,9 +32,15 @@ function initApp(){
 
 // LOAD NAV ITEMS TO NAVBAR
         $.each(navArray, function(idx, navItems){
-            $(".links-container").append(
-                `<a class="aNorm" href="${navItems.link}">${navItems.name}</a>`
-            );
+            if(navItems.id != "#"){
+                $(".links-container").append(
+                    `<a class="aNorm" id="${navItems.id}" href="${navItems.link}">${navItems.name}</a>`
+                );
+            } else {
+                $(".links-container").append(
+                    `<a class="aNorm" href="${navItems.link}">${navItems.name}</a>`
+                );
+            }
         })
     }).fail(function(error){
         console.log(error);
@@ -86,6 +95,12 @@ function success(){
     }, 2000);
 }
 
+
+
+
+// /////////////////////////////////////// //
+// ----------- SMOOTH SCROLL ---------- //
+// ////////////////////////////////////// //
 // function smoothScroll(){
 //     $("#").click(function(){
 //         $('html,body').animate({
@@ -94,20 +109,42 @@ function success(){
 //     });
 // }
 
+
+
+
+// /////////////////////////////////////// //
+// -------- HIDE DROPDOWN INIT ------- //
+// ////////////////////////////////////// //
 function initHideDropdown(){
     $(".dropdown-content").hide();
 }
 
+
+
+
+// /////////////////////////////////////// //
+// ------------- DROPDOWN ------------- //
+// ////////////////////////////////////// //
 function dropdown(){
     $(".dropdown").click(function(){
         $(".dropdown-content").toggle();
     });
 }
 
-function serverCallBack(result){
 
-}
 
+
+// /////////////////////////////////////// //
+// ---------- SERVER CALLBACK ---------- //
+// ////////////////////////////////////// //
+function serverCallBack(result){ }
+
+
+
+
+// /////////////////////////////////////// //
+// -------------- DOC READY -------------- //
+// ////////////////////////////////////// //
 $(document).ready(function(){
     initHideDropdown();
     FIREBASE_UTILITY.getAllMessages(serverCallBack);
