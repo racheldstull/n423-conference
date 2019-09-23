@@ -32,7 +32,7 @@ nav {
         width: 70%;
         height: 80px;
 
-        .links-container {
+        .links-container-php, .links-container-js {
             text-align: right;
             padding-right: 100px;
             display: flex;
@@ -54,19 +54,25 @@ nav {
                 transition: all .2s ease-in-out;
                 border-bottom: 1px solid $bg;
 
+                i {
+                    color: $white;
+                    font-size: 20px;
+                    padding: 0 5px;
+                }
+
                 &:hover {
                     color: $red;
                     border-bottom: 2px solid $red;
                 }
 
-                &:last-child {
+                &:nth-last-child(2) {
                     background-color: $red;
                     margin-left: 10px;
                     padding-right: 20px;
                     padding-left: 20px;
                 }
 
-                &:hover:last-child {
+                &:hover:nth-last-child(2) {
                     color: $white;
                     background-color: $red-hover;
                     border-bottom: 1px solid $bg;
@@ -93,7 +99,7 @@ nav {
                 }
 
                 .dropdown-content {
-                    display: flex;
+                    display: none;
                     flex-direction: column;
                     position: absolute;
                     margin-top: 80px;

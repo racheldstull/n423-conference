@@ -35,7 +35,7 @@ var FIREBASE_UTILITY = (function(){
             .ref('messages/')
             .once('value')
             .then(function(snapshot) {
-                console.log(snapshot.val());
+                // console.log(snapshot.val());
                 var messageArray = snapshot.val();
                 return callback(messageArray)
             });

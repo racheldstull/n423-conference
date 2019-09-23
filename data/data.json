@@ -10,43 +10,52 @@
         },
         {
             "name":"Speakers",
-            "link":"jsspeakers.html",
+            "link":"speakers.html",
+            "id": "speakers",
             "dropdown": [
                 {
+                    "parent":"Speakers",
                     "name": "PHP Ver.",
-                    "link": "#"
+                    "link": "speakers.php"
                 },
                 {
+                    "parent":"Speakers",
                     "name": "JS Ver.",
-                    "link": "#"
+                    "link": "speakers.html"
                 }
             ]
         },
         {
             "name":"Contact",
             "link":"contact.html",
+            "id": "contact",
             "dropdown": [
                 {
+                    "parent":"Contact",
                     "name": "PHP Ver.",
-                    "link": "#"
+                    "link": "contact.php"
                 },
                 {
+                    "parent":"Contact",
                     "name": "JS Ver.",
-                    "link": "#"
+                    "link": "contact.html"
                 }
             ]
         },
         {
-          "name":"Message Center",
-          "link":"messages.html",
+            "name":"Message Center",
+            "link":"messages.html",
+            "id": "messages",
             "dropdown": [
                 {
+                    "parent":"Message Center",
                     "name": "PHP Ver.",
-                    "link": "#"
+                    "link": "messages.php"
                 },
                 {
+                    "parent":"Message Center",
                     "name": "JS Ver.",
-                    "link": "#"
+                    "link": "messages.html"
                 }
             ]
         },
@@ -57,6 +66,10 @@
         {
             "name":"RSVP",
             "link":"rsvp.html"
+        },
+        {
+            "name":"<i class='fas fa-user-astronaut'></i>",
+            "link":"login.html"
         }
     ],
     "speakers":[

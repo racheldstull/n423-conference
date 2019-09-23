@@ -1,12 +1,34 @@
+function processMessages(messages){
+    console.log(messages);
+    $.each(messages, function(idx, value){
+        $('.message-content').append(
+          `<div class="comment">
+                <p class="commentName"><span class="nameSpan">${value.name}</span> <span class="emailSpan">(${value.email})</span> wrote at ${value.time}:</p>
+                <div class="commentInfo">
+                    <p>${value.subject}</p>
+                    <p>${value.message}</p>
+                </div>
+           </div>
+            <hr>`
+        );
+    });
+}
+
+
+
+
 // /////////////////////////////////////// //
 // ---------------- INIT APP ---------------- //
 // ////////////////////////////////////// //
 function initApp(){
     $.getJSON("data/data.json", function(result){
         //success one
-        console.log(result.speakers);
-        let speakersArray = result.speakers;
-        let navArray = result.nav;
+        let speakersArray = result.speakers; //set speakers array
+        let navArray = result.nav; //set navArray
+
+
+
+
 
         // LOAD SPEAKERS TO SPEAKER PAGE
         $.each(speakersArray, function(idx, speakers){
@@ -25,74 +47,101 @@ function initApp(){
                         </div>
                      </div>
                  </div>`
-            );
-        });
+            ); //load content to speaker-container div
+        });  //loop through speakersArray
 
         // $.each(messages, function(idx, value) {}
 
-// LOAD NAV ITEMS TO NAVBAR
+
+
+
+
+        // LOAD NAV ITEMS TO NAVBAR
         $.each(navArray, function(idx, navItems){
-            if(navItems.id != "#"){
-                $(".links-container").append(
-                    `<a class="aNorm" id="${navItems.id}" href="${navItems.link}">${navItems.name}</a>`
-                );
+            if(navItems.dropdown != undefined){ //if the navItem contains a dropdown
+                $(".links-container-js").append(
+                    `<div class="dropdown dropdown-${navItems.id}">
+                         <a class="dropbtn" onclick="dropdown${navItems.id}()">${navItems.name}
+                            <i class="fa fa-caret-down"></i>
+                         </a>
+                         <div class="dropdown-content dropdown-content-${navItems.id}">
+                         </div>
+                     </div>`
+                ); //load content to links-container div
             } else {
-                $(".links-container").append(
+                $(".links-container-js").append(
                     `<a class="aNorm" href="${navItems.link}">${navItems.name}</a>`
-                );
-            }
-        })
+                ); //load content to links-container div
+            } //if the navItem doesn't contain a dropdown menu
+
+            $.each(navItems.dropdown, function(idx, items){
+                if(items.parent == navItems.name){
+                    $('.dropdown-content').append(
+                        `<a href="${items.link}">${items.name}</a>`
+                    );
+                } //check if the dropdown belongs to the navItem
+            }); //loop through the navItems dropdown items
+        }) //loop through the navArray
     }).fail(function(error){
         console.log(error);
     });
 
-// ADD CONTACT INFORMATION TO DATABASE
-    $("#add").click(function (e) {
-        e.preventDefault();
 
-        let name = $("#addName").val();
-        let email = $("#addEmail").val();
-        let subject = $("#addSubject").val();
-        let message = $("#addMessage").val()
+
+
+
+    // ADD CONTACT INFORMATION TO DATABASE
+    $("#add").click(function (e) {
+        e.preventDefault(); //prevent click default
+
+        //assign user inputs to variables
+        let name = $("#addName-js").val();
+        let email = $("#addEmail-js").val();
+        let subject = $("#addSubject-js").val();
+        let message = $("#addMessage-js").val()
         let time = Date($.now());
 
-        if(name == "" | email == "" | subject == "" | message == ""){
-            $("#popup").css("display", "flex");
-            $("html").css("pointer-events", "none");
-            $("html").css("cursor", "wait");
+        if(name == "" | email == "" | subject == "" | message == ""){ //check if any fields are empty
+            $("#popup").css("display", "flex"); //display popup
+            $("html").css("pointer-events", "none"); //prevent user click
+            $("html").css("cursor", "wait"); //change cursor so for user feedback
 
             $("#popup .text").append(
                 `<p>Please complete entire form</p>`
-            );
+            ); //display error text inside popup
 
             setTimeout(function(){
-                $("#popup").css("display", "none");
-                $("html").css("pointer-events", "initial");
-                $("html").css("cursor", "auto");
-            }, 1500)
-
+                $("#popup").css("display", "none"); //hide popup
+                $("html").css("pointer-events", "initial"); //allow user click
+                $("html").css("cursor", "auto"); //reset cursor
+            }, 1500) //kill popup after 1.5seconds
         } else {
-            FIREBASE_UTILITY.writeData(name, email, subject, message, time);
-            FIREBASE_UTILITY.getAllMessages(serverCallBack);
-            success();
+            FIREBASE_UTILITY.writeData(name, email, subject, message, time); //write to db
+            FIREBASE_UTILITY.getAllMessages(serverCallBack); //server callback
+            success(); //call success popup and redirect function
         }
     });
+
+
+    //LOAD MESSAGES
+    FIREBASE_UTILITY.getAllMessages(processMessages);
 }
 
+
+
 function success(){
-    $("#popup").css("display", "flex");
-    $("html").css("pointer-events", "none");
-    $("html").css("cursor", "wait");
+    $("#popup").css("display", "flex"); //display popup
+    $("html").css("pointer-events", "none"); //prevent user click
+    $("html").css("cursor", "wait"); //change cursor so for user feedback
 
     $("#popup .text").append(
         `<p>Query successfully submitted!</p><br>
          <p>Reloading page...</p>`
-    );
-
+    ); //display success text inside popup
 
     setTimeout(function(){
         location.reload();
-    }, 2000);
+    }, 2000); //reload page after 2 seconds to remove popup and user inputs
 }
 
 
@@ -105,19 +154,9 @@ function success(){
 //     $("#").click(function(){
 //         $('html,body').animate({
 //             scrollTop: $("#about-section").offset().top - 10
-//         });
-//     });
+//         }); //animate scroll to about-section
+//     }); //if the about nav button is clicked
 // }
-
-
-
-
-// /////////////////////////////////////// //
-// -------- HIDE DROPDOWN INIT ------- //
-// ////////////////////////////////////// //
-function initHideDropdown(){
-    $(".dropdown-content").hide();
-}
 
 
 
@@ -125,11 +164,37 @@ function initHideDropdown(){
 // /////////////////////////////////////// //
 // ------------- DROPDOWN ------------- //
 // ////////////////////////////////////// //
-function dropdown(){
-    $(".dropdown").click(function(){
-        $(".dropdown-content").toggle();
-    });
-}
+var toggle = false; //set false toggle variable
+function dropdownspeakers(){
+    if (!toggle){ //if toggle is false display dropdown
+        $(".dropdown-speakers .dropdown-content-speakers").css("display", "flex");
+        toggle = true;
+    } else if(toggle){
+        $(".dropdown-speakers .dropdown-content").css("display", "none");
+        toggle = false;
+    } //if toggle is true hide dropdown
+} //dropdown for speakers nav item
+
+function dropdowncontact(){
+    if (!toggle){ //if toggle is false display dropdown
+        $(".dropdown-contact .dropdown-content-contact").css("display", "flex");
+        toggle = true;
+    } else if(toggle){
+        $(".dropdown-contact .dropdown-content").css("display", "none");
+        toggle = false;
+    } //if toggle is true hide dropdown
+} //dropdown for contact nav item
+
+function dropdownmessages(){
+
+    if (!toggle){ //if toggle is false display dropdown
+        $(".dropdown-messages .dropdown-content-messages").css("display", "flex");
+        toggle = true;
+    } else if(toggle){
+        $(".dropdown-messages .dropdown-content").css("display", "none");
+        toggle = false;
+    } //if toggle is true hide dropdown
+} //dropdown for messages nav item
 
 
 
@@ -137,7 +202,8 @@ function dropdown(){
 // /////////////////////////////////////// //
 // ---------- SERVER CALLBACK ---------- //
 // ////////////////////////////////////// //
-function serverCallBack(result){ }
+function serverCallBack(result){ } //callback to server
+
 
 
 
@@ -146,7 +212,6 @@ function serverCallBack(result){ }
 // -------------- DOC READY -------------- //
 // ////////////////////////////////////// //
 $(document).ready(function(){
-    initHideDropdown();
     FIREBASE_UTILITY.getAllMessages(serverCallBack);
     initApp();
     // smoothScroll();

@@ -1,0 +1,43 @@
+.message-content {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 400px;
+  width: 550px;
+  color: white;
+
+  .comment {
+    font-family: "Trebuchet MS", sans-serif;
+
+    .commentName {
+      font-size: 15px;
+      font-weight: lighter;
+    }
+
+    .nameSpan {
+      font-weight: bold;
+    }
+
+    .emailSpan {
+      font-style: italic;
+    }
+
+    .commentInfo {
+      padding-left: 20px;
+
+      p {
+        font-size: 15px;
+        font-weight: lighter;
+      }
+    }
+  }
+
+  hr {
+    margin: 40px 60px;
+    padding: 0;
+    background-color: white;
+  }
+}

@@ -74,7 +74,7 @@ nav {
   nav .nav-right {
     width: 70%;
     height: 80px; }
-    nav .nav-right .links-container {
+    nav .nav-right .links-container-php, nav .nav-right .links-container-js {
       text-align: right;
       padding-right: 100px;
       display: -webkit-box;
@@ -88,7 +88,7 @@ nav {
       right: 0;
       height: 80px;
       top: -15px; }
-      nav .nav-right .links-container .aNorm {
+      nav .nav-right .links-container-php .aNorm, nav .nav-right .links-container-js .aNorm {
         color: #fff;
         padding: 15px;
         text-decoration: none;
@@ -101,23 +101,27 @@ nav {
         -o-transition: all .2s ease-in-out;
         transition: all .2s ease-in-out;
         border-bottom: 1px solid #211F24; }
-        nav .nav-right .links-container .aNorm:hover {
+        nav .nav-right .links-container-php .aNorm i, nav .nav-right .links-container-js .aNorm i {
+          color: #fff;
+          font-size: 20px;
+          padding: 0 5px; }
+        nav .nav-right .links-container-php .aNorm:hover, nav .nav-right .links-container-js .aNorm:hover {
           color: #E84A43;
           border-bottom: 2px solid #E84A43; }
-        nav .nav-right .links-container .aNorm:last-child {
+        nav .nav-right .links-container-php .aNorm:nth-last-child(2), nav .nav-right .links-container-js .aNorm:nth-last-child(2) {
           background-color: #E84A43;
           margin-left: 10px;
           padding-right: 20px;
           padding-left: 20px; }
-        nav .nav-right .links-container .aNorm:hover:last-child {
+        nav .nav-right .links-container-php .aNorm:hover:nth-last-child(2), nav .nav-right .links-container-js .aNorm:hover:nth-last-child(2) {
           color: #fff;
           background-color: #c1403a;
           border-bottom: 1px solid #211F24; }
-      nav .nav-right .links-container .dropdown {
+      nav .nav-right .links-container-php .dropdown, nav .nav-right .links-container-js .dropdown {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex; }
-        nav .nav-right .links-container .dropdown a {
+        nav .nav-right .links-container-php .dropdown a, nav .nav-right .links-container-js .dropdown a {
           color: #fff;
           padding: 15px;
           text-decoration: none;
@@ -129,12 +133,10 @@ nav {
           -webkit-transition: all .2s ease-in-out;
           -o-transition: all .2s ease-in-out;
           transition: all .2s ease-in-out; }
-          nav .nav-right .links-container .dropdown a:hover {
+          nav .nav-right .links-container-php .dropdown a:hover, nav .nav-right .links-container-js .dropdown a:hover {
             cursor: pointer; }
-        nav .nav-right .links-container .dropdown .dropdown-content {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
+        nav .nav-right .links-container-php .dropdown .dropdown-content, nav .nav-right .links-container-js .dropdown .dropdown-content {
+          display: none;
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
           -ms-flex-direction: column;
@@ -143,12 +145,12 @@ nav {
           margin-top: 80px;
           min-width: 130px;
           background-color: #211F24; }
-          nav .nav-right .links-container .dropdown .dropdown-content a {
+          nav .nav-right .links-container-php .dropdown .dropdown-content a, nav .nav-right .links-container-js .dropdown .dropdown-content a {
             padding: 2px 2px 2px 12px;
             line-height: 30px;
             text-align: left;
             border-left: 1px solid #211F24; }
-            nav .nav-right .links-container .dropdown .dropdown-content a:hover {
+            nav .nav-right .links-container-php .dropdown .dropdown-content a:hover, nav .nav-right .links-container-js .dropdown .dropdown-content a:hover {
               color: #E84A43;
               border-left: 2px solid #E84A43; }
 
@@ -376,3 +378,32 @@ nav {
           .contact-content .form-container form .bottom-formsec button:hover {
             background-color: #c1403a;
             cursor: pointer; }
+
+.message-content {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 400px;
+  width: 550px;
+  color: white; }
+  .message-content .comment {
+    font-family: "Trebuchet MS", sans-serif; }
+    .message-content .comment .commentName {
+      font-size: 15px;
+      font-weight: lighter; }
+    .message-content .comment .nameSpan {
+      font-weight: bold; }
+    .message-content .comment .emailSpan {
+      font-style: italic; }
+    .message-content .comment .commentInfo {
+      padding-left: 20px; }
+      .message-content .comment .commentInfo p {
+        font-size: 15px;
+        font-weight: lighter; }
+  .message-content hr {
+    margin: 40px 60px;
+    padding: 0;
+    background-color: white; }
