@@ -11,53 +11,20 @@
         {
             "name":"Speakers",
             "link":"speakers.html",
-            "id": "speakers",
-            "dropdown": [
-                {
-                    "parent":"Speakers",
-                    "name": "PHP Ver.",
-                    "link": "speakers.php"
-                },
-                {
-                    "parent":"Speakers",
-                    "name": "JS Ver.",
-                    "link": "speakers.html"
-                }
-            ]
+            "route": "speakers",
+            "dropdown": ""
         },
         {
             "name":"Contact",
             "link":"contact.html",
-            "id": "contact",
-            "dropdown": [
-                {
-                    "parent":"Contact",
-                    "name": "PHP Ver.",
-                    "link": "contact.php"
-                },
-                {
-                    "parent":"Contact",
-                    "name": "JS Ver.",
-                    "link": "contact.html"
-                }
-            ]
+            "route": "contact",
+            "dropdown": ""
         },
         {
             "name":"Message Center",
             "link":"messages.html",
-            "id": "messages",
-            "dropdown": [
-                {
-                    "parent":"Message Center",
-                    "name": "PHP Ver.",
-                    "link": "messages.php"
-                },
-                {
-                    "parent":"Message Center",
-                    "name": "JS Ver.",
-                    "link": "messages.html"
-                }
-            ]
+            "route": "messages",
+            "dropdown": ""
         },
         {
             "name":"Schedule",

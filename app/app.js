@@ -60,11 +60,13 @@ function initApp(){
         $.each(navArray, function(idx, navItems){
             if(navItems.dropdown != undefined){ //if the navItem contains a dropdown
                 $(".links-container-js").append(
-                    `<div class="dropdown dropdown-${navItems.id}">
-                         <a class="dropbtn" onclick="dropdown${navItems.id}()">${navItems.name}
+                    `<div class="dropdown dropdown-${navItems.route}">
+                         <a class="dropbtn" onclick="dropdown${navItems.route}()">${navItems.name}
                             <i class="fa fa-caret-down"></i>
                          </a>
-                         <div class="dropdown-content dropdown-content-${navItems.id}">
+                         <div class="dropdown-content dropdown-content-${navItems.route}">
+                            <a href="${navItems.route}.php">PHP Ver.</a>
+                            <a href="${navItems.route}.html">JS Ver.</a>
                          </div>
                      </div>`
                 ); //load content to links-container div
@@ -73,14 +75,6 @@ function initApp(){
                     `<a class="aNorm" href="${navItems.link}">${navItems.name}</a>`
                 ); //load content to links-container div
             } //if the navItem doesn't contain a dropdown menu
-
-            $.each(navItems.dropdown, function(idx, items){
-                if(items.parent == navItems.name){
-                    $('.dropdown-content').append(
-                        `<a href="${items.link}">${items.name}</a>`
-                    );
-                } //check if the dropdown belongs to the navItem
-            }); //loop through the navItems dropdown items
         }) //loop through the navArray
     }).fail(function(error){
         console.log(error);
