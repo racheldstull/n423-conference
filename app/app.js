@@ -106,6 +106,51 @@ function initApp(){
     FIREBASE_UTILITY.getAllMessages(processMessages);
 }
 
+/////////////// ADD LISTENERS (FOR LOGIN/OUT///////////////
+function addListeners() {
+    $(".content-body .form-container a").click(function(e) {
+        let btnID = e.currentTarget.id;
+
+        if (btnID == "signin") {
+            // This is for when you sign in with email password
+            //   You would probably display the form here We are not doing anything with it now
+            console.log("email");
+        }
+
+        if (btnID == "signin-google") {
+            //   this is for google signin
+            console.log("google");
+            FIREBASE_MODEL.signInWithGoogle();
+        }
+
+        if(btnID == 'signout-google'){
+            FIREBASE_MODEL.signOut();
+        }
+    });
+
+    $("#suSubmit").click(function(e) {
+        e.preventDefault();
+        e.preventDefault();
+        let fName = $("#sufName").val();
+        let lName = $("#sulName").val();
+        let email = $("#suEmail").val();
+        let pw = $("#suPassword").val();
+
+        FIREBASE_MODEL.createAccount(email, pw, fName, lName);
+    });
+
+    $("#siSubmit").click(function(e) {
+        e.preventDefault();
+        let email = $("#siEmail").val();
+        let pw = $("#siPassword").val();
+
+        FIREBASE_MODEL.signInWithEP(email, pw);
+    });
+}
+
+
+
+
 
 ////////////////////// SUCCESS //////////////////////
 function success(){
@@ -180,5 +225,6 @@ function serverCallBack(result){ } //callback to server
 $(document).ready(function(){
     FIREBASE_UTILITY.getAllMessages(serverCallBack);
     initApp();
+    addListeners();
     // smoothScroll();
 });

@@ -48,7 +48,8 @@ while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
     </div>
 </div>
 
-<script src="lib/jquery-3.4.1.min.js"></script>
-<script src="app/app.js"></script>
-</body>
-</html>
+<?php
+
+require_once ('includes/footer.php');
+
+?>

@@ -10,7 +10,7 @@ setcookie(session_name(), "", time() - 3600);
 
 session_destroy();
 
-$page_title = "Terra Art Logout";
+$page_title = "Logout";
 $css_route = "../";
 include('../includes/connect.php');
 

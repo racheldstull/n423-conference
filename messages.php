@@ -42,11 +42,8 @@ while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
     ?>
 </div>
 
-<script src="lib/jquery-3.4.1.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-database.js"></script>
-<script src="app/firebaseUtility.js"></script>
-<script src="app/app.js"></script>
-</body>
-</html>
+<?php
+
+require_once ('includes/footer.php');
+
+?>

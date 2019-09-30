@@ -21,3 +21,9 @@ require_once 'includes/connect.php';
     <h2>Logout</h2>
     <p>Thank you for your visit. You are now logged out.</p>
 </div>
+
+<?php
+
+require_once ('includes/footer.php');
+
+?>

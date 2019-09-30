@@ -22,36 +22,36 @@
     <div class="nav-right">
         <div class="links-container-js"></div>
     </div>
-</nav>
 
-<div class="content-body">
-    <div class="splash">
-        <div class="txt">
-            <div class="top-line">
-                <h1>Exploration Never Ends<span>.</span></h1>
+    <div class="login">
+        <div class="signin-go">
+            <div hidden class="user-pic"></div>
+            <div hidden class="user-name"></div>
+            <div class="sig">
+                <a href="#" id="signin-google">Signin with Google</a>
+                <a hidden href="#" id="signout-google">Sign Out</a>
             </div>
-            <div class="bottom-line">
-                <div class="line"></div>
-                <h2>April 23-25 <span>//</span> San Fransisco</h2>
-                <div class="space"></div>
-                <img src="images/logo.png" alt="">
-            </div>
-        </div>
-        <div class="about-pointer">
-            <div class="container">
-                <a href="#about-section">
-                    <div>
-                        <p>About</p>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="img">
-            <img src="images/bg-splash.jpg" alt="">
         </div>
     </div>
-    <div id="about-section" class="about"></div>
+</nav>
+
+<div class="content-body login-content">
+    <h2>Login</h2>
+
+    <div class="form-container">
+        <!-- display the login form -->
+        <div class="login">
+            <form id="loginForm" enctype="text/plain">
+                <div class="form-section middle-formsec">
+                    <input id="siEmail" type="text" placeholder="Email" name="Email" required>
+                    <input id="siPassword" type="text" placeholder="Password" name="password" required>
+                </div>
+                <div class="form-section bottom-formsec">
+                    <input type="submit" name="Submit" id="Submit" value="Login/Register" />
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 
 <script src="lib/jquery-3.4.1.min.js"></script>

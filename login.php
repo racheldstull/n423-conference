@@ -8,15 +8,11 @@ require_once 'includes/connect.php';
 
 ?>
 <div class="content-body login-content">
-    <h2>Login or Register</h2>
+    <h2>Login</h2>
 
-    <?php
-    $message = "Please enter your username and password to login.";
-    ?>
     <div class="form-container">
         <!-- display the login form -->
         <div class="login">
-            <p><?php echo $message; ?></p>
                 <form id="loginForm" method="get" action="process/processLogin.php" enctype="text/plain">
                     <div class="form-section middle-formsec">
                         <input id="username-php" type="text" placeholder="Username" name="username" required>
@@ -27,5 +23,12 @@ require_once 'includes/connect.php';
                     </div>
                 </form>
         </div>
+        <a href="#" id="signin-google">Signin with Google</a>
     </div>
 </div>
+
+<?php
+
+require_once ('includes/footer.php');
+
+?>
