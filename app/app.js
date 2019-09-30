@@ -1,7 +1,8 @@
+///////////// PROCESS MESSAGES /////////////
 function processMessages(messages){
     console.log(messages);
     $.each(messages, function(idx, value){
-        $('.message-content').append(
+        $('.message-content-js').append(
           `<div class="comment">
                 <p class="commentName"><span class="nameSpan">${value.name}</span> <span class="emailSpan">(${value.email})</span> wrote at ${value.time}:</p>
                 <div class="commentInfo">
@@ -16,19 +17,12 @@ function processMessages(messages){
 
 
 
-
-// /////////////////////////////////////// //
-// ---------------- INIT APP ---------------- //
-// ////////////////////////////////////// //
+/////////////////// INIT APP ///////////////////
 function initApp(){
     $.getJSON("data/data.json", function(result){
         //success one
         let speakersArray = result.speakers; //set speakers array
         let navArray = result.nav; //set navArray
-
-
-
-
 
         // LOAD SPEAKERS TO SPEAKER PAGE
         $.each(speakersArray, function(idx, speakers){
@@ -51,10 +45,6 @@ function initApp(){
         });  //loop through speakersArray
 
         // $.each(messages, function(idx, value) {}
-
-
-
-
 
         // LOAD NAV ITEMS TO NAVBAR
         $.each(navArray, function(idx, navItems){
@@ -79,10 +69,6 @@ function initApp(){
     }).fail(function(error){
         console.log(error);
     });
-
-
-
-
 
     // ADD CONTACT INFORMATION TO DATABASE
     $("#add").click(function (e) {
@@ -116,13 +102,12 @@ function initApp(){
         }
     });
 
-
     //LOAD MESSAGES
     FIREBASE_UTILITY.getAllMessages(processMessages);
 }
 
 
-
+////////////////////// SUCCESS //////////////////////
 function success(){
     $("#popup").css("display", "flex"); //display popup
     $("html").css("pointer-events", "none"); //prevent user click
@@ -140,10 +125,7 @@ function success(){
 
 
 
-
-// /////////////////////////////////////// //
-// ----------- SMOOTH SCROLL ---------- //
-// ////////////////////////////////////// //
+////////////////// STORE SESSION //////////////////
 // function smoothScroll(){
 //     $("#").click(function(){
 //         $('html,body').animate({
@@ -154,10 +136,7 @@ function success(){
 
 
 
-
-// /////////////////////////////////////// //
-// ------------- DROPDOWN ------------- //
-// ////////////////////////////////////// //
+//////////////////// DROPDOWN ////////////////////
 var toggle = false; //set false toggle variable
 function dropdownspeakers(){
     if (!toggle){ //if toggle is false display dropdown
@@ -192,19 +171,12 @@ function dropdownmessages(){
 
 
 
-
-// /////////////////////////////////////// //
-// ---------- SERVER CALLBACK ---------- //
-// ////////////////////////////////////// //
+//////////////// SERVER CALLBACK ////////////////
 function serverCallBack(result){ } //callback to server
 
 
 
-
-
-// /////////////////////////////////////// //
-// -------------- DOC READY -------------- //
-// ////////////////////////////////////// //
+/////////////////// DOC READY ///////////////////
 $(document).ready(function(){
     FIREBASE_UTILITY.getAllMessages(serverCallBack);
     initApp();

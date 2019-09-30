@@ -292,7 +292,7 @@ nav {
           font-family: "Trebuchet MS", sans-serif;
           font-weight: lighter; }
 
-.contact-content {
+.contact-content, .login-content {
   background-image: url("../images/bg-contact.jpg");
   background-position: top;
   background-size: cover;
@@ -300,7 +300,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .contact-content .form-container {
+  .contact-content .form-container, .login-content .form-container {
     height: 440px;
     width: 460px;
     background-color: #fff;
@@ -315,12 +315,12 @@ nav {
     margin-top: 180px;
     overflow: hidden;
     border-radius: 6px; }
-    .contact-content .form-container h1 {
+    .contact-content .form-container h1, .login-content .form-container h1 {
       color: #211F24;
       text-align: center;
       font-family: "Aileronsregular", sans-serif;
       padding-top: 60px; }
-    .contact-content .form-container form {
+    .contact-content .form-container form, .login-content .form-container form {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -329,7 +329,7 @@ nav {
       -ms-flex-direction: column;
       flex-direction: column;
       padding: 30px 60px 60px 60px; }
-      .contact-content .form-container form input[type=text], .contact-content .form-container form textarea {
+      .contact-content .form-container form input[type=text], .contact-content .form-container form input[type=password], .contact-content .form-container form textarea, .login-content .form-container form input[type=text], .login-content .form-container form input[type=password], .login-content .form-container form textarea {
         border: none;
         padding: 5px;
         border-bottom: 1.5px solid #7B7B7B;
@@ -337,10 +337,10 @@ nav {
         -webkit-transition: all .2s ease-in-out;
         -o-transition: all .2s ease-in-out;
         transition: all .2s ease-in-out; }
-        .contact-content .form-container form input[type=text]:focus, .contact-content .form-container form textarea:focus {
+        .contact-content .form-container form input[type=text]:focus, .contact-content .form-container form input[type=password]:focus, .contact-content .form-container form textarea:focus, .login-content .form-container form input[type=text]:focus, .login-content .form-container form input[type=password]:focus, .login-content .form-container form textarea:focus {
           outline: none;
           border-bottom: 1.5px solid #E84A43; }
-      .contact-content .form-container form .top-formsec {
+      .contact-content .form-container form .top-formsec, .login-content .form-container form .top-formsec {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -348,12 +348,12 @@ nav {
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
         flex-direction: row; }
-        .contact-content .form-container form .top-formsec input[type=text] {
+        .contact-content .form-container form .top-formsec input[type=text], .login-content .form-container form .top-formsec input[type=text] {
           width: 48%;
           margin-bottom: 30px; }
-          .contact-content .form-container form .top-formsec input[type=text]:nth-child(1) {
+          .contact-content .form-container form .top-formsec input[type=text]:nth-child(1), .login-content .form-container form .top-formsec input[type=text]:nth-child(1) {
             margin-right: 4%; }
-      .contact-content .form-container form .middle-formsec {
+      .contact-content .form-container form .middle-formsec, .login-content .form-container form .middle-formsec {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -361,12 +361,12 @@ nav {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column; }
-        .contact-content .form-container form .middle-formsec input[type=text], .contact-content .form-container form .middle-formsec textarea {
+        .contact-content .form-container form .middle-formsec input[type=text], .contact-content .form-container form .middle-formsec textarea, .login-content .form-container form .middle-formsec input[type=text], .login-content .form-container form .middle-formsec textarea {
           width: 100%;
           margin-bottom: 30px; }
-      .contact-content .form-container form .bottom-formsec {
+      .contact-content .form-container form .bottom-formsec, .login-content .form-container form .bottom-formsec {
         text-align: right; }
-        .contact-content .form-container form .bottom-formsec button {
+        .contact-content .form-container form .bottom-formsec button, .login-content .form-container form .bottom-formsec button {
           background-color: #E84A43;
           border: none;
           color: #fff;
@@ -375,7 +375,7 @@ nav {
           -webkit-transition: all .2s ease-in-out;
           -o-transition: all .2s ease-in-out;
           transition: all .2s ease-in-out; }
-          .contact-content .form-container form .bottom-formsec button:hover {
+          .contact-content .form-container form .bottom-formsec button:hover, .login-content .form-container form .bottom-formsec button:hover {
             background-color: #c1403a;
             cursor: pointer; }
 

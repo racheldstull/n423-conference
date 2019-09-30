@@ -1,4 +1,4 @@
-.contact-content {
+.contact-content, .login-content {
   background-image: url("../images/bg-contact.jpg");
   background-position: top;
   background-size: cover;
@@ -28,7 +28,7 @@
       flex-direction: column;
       padding: 30px 60px 60px 60px;
 
-      input[type=text], textarea {
+      input[type=text], input[type=password], textarea{
         border: none;
         padding: 5px;
         border-bottom: 1.5px solid $grey;

@@ -1,6 +1,7 @@
 <?php
 
 $page_title = "ICDSE 2020 | Contact PHP Classic";
+$css_route = "../";
 
 require_once '../includes/head.php';
 require_once '../includes/connect.php';
@@ -10,10 +11,6 @@ $name = $link->real_escape_string(trim(filter_input(INPUT_GET, 'name', FILTER_SA
 $email = $link->real_escape_string(trim(filter_input(INPUT_GET, 'email', FILTER_SANITIZE_EMAIL)));
 $subject = $link->real_escape_string(trim(filter_input(INPUT_GET, 'subject', FILTER_SANITIZE_STRING)));
 $message = $link->real_escape_string(trim(filter_input(INPUT_GET, 'message', FILTER_SANITIZE_STRING)));
-
-
-echo "<script>console.log('Debug Objects: " . $name . "' );</script>";
-
 
 //define the MySQL insert statement
 $sql= "INSERT INTO contacts VALUES (NULL, '$name', '$email', '$subject', '$message', NULL)";
@@ -31,7 +28,7 @@ if(!$query) {
     exit;
 }
 
-echo "New product has been created!";
+echo "You're message has been received!";
 
 $link->close();
 

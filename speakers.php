@@ -2,6 +2,7 @@
 
 // create page title value
 $page_title = "ICDSE 2020 | Speakers PHP Classic";
+$css_route = "";
 
 // create requires for the header and database
 require_once ('includes/head.php');

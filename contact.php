@@ -2,6 +2,7 @@
 
 // create page title value
 $page_title = "ICDSE 2020 | Contact PHP Classic";
+$css_route = "";
 
 // create requires for the header and database
 require_once ('includes/head.php');
@@ -17,7 +18,7 @@ require_once ('includes/connect.php');
 <div class="content-body contact-content">
     <div class="form-container">
         <h1>Contact Us</h1>
-        <form id="contactForm" method="post" action="process/processContact.php" enctype="text/plain">
+        <form id="contactForm" method="get" action="process/processContact.php" enctype="text/plain">
             <div class="form-section top-formsec">
                 <input id="addName-php" type="text" placeholder="Full Name" name="name" required>
                 <input id="addEmail-php" type="text" placeholder="Email" name="email" required>

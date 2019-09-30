@@ -36,7 +36,7 @@
         },
         {
             "name":"<i class='fas fa-user-astronaut'></i>",
-            "link":"login.html"
+            "link":"login.php"
         }
     ],
     "speakers":[
