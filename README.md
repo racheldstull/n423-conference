@@ -35,11 +35,11 @@ Project currently in development for my N423 class
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/racheldstull/n423-conference">
+    <img src="https://github.com/racheldstull/n423-conference/blob/5b8806697b3b72806ef46bad94e61dc15f00eee1/images/logo.png" alt="Logo" width="1727" height="576">
   </a>
 
-  <h3 align="center">project_title</h3>
+  <h3 align="center">International Conference for Deep Space Exploration 2020</h3>
 
   <p align="center">
     project_description
