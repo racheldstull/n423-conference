@@ -29,7 +29,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/racheldstull/n423-conference">
-    <img src="https://github.com/racheldstull/n423-conference/blob/877ba41992f67f54f0a7c6e43dca7121265c1227/images/logo.svg" alt="Logo" width="1727" height="576">
+    <img src="https://github.com/racheldstull/n423-conference/blob/877ba41992f67f54f0a7c6e43dca7121265c1227/images/logo.svg" alt="Logo" width="600">
   </a>
 
   <h3 align="center">International Conference for Deep Space Exploration 2020</h3>
